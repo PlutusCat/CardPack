@@ -1,5 +1,6 @@
 PODS:
   - Hero (1.4.0)
+  - OpenCV (3.4.2)
   - Realm (3.13.1):
     - Realm/Headers (= 3.13.1)
   - Realm/Headers (3.13.1)
@@ -21,9 +22,11 @@ PODS:
     - RxSwift (>= 4.4.2, ~> 4.4)
   - SnapKit (4.2.0)
   - SwiftLint (0.31.0)
+  - TesseractOCRiOS (5.0.1)
 
 DEPENDENCIES:
   - Hero
+  - OpenCV
   - RxBlocking
   - RxCocoa
   - RxRealm
@@ -31,10 +34,12 @@ DEPENDENCIES:
   - RxTest
   - SnapKit
   - SwiftLint
+  - TesseractOCRiOS
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Hero
+    - OpenCV
     - Realm
     - RealmSwift
     - RxAtomic
@@ -45,9 +50,11 @@ SPEC REPOS:
     - RxTest
     - SnapKit
     - SwiftLint
+    - TesseractOCRiOS
 
 SPEC CHECKSUMS:
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
+  OpenCV: 452909747854c92e0f59670961ed5131f5286cb5
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
@@ -58,7 +65,8 @@ SPEC CHECKSUMS:
   RxTest: 6433d5b6229f5de424fa534bc22b5e6c38b0b671
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
+  TesseractOCRiOS: 2c189465f86abb030d0c5141c90da9705b647854
 
-PODFILE CHECKSUM: b7712518096fabd95e65249c65a3d5a5a7dd6314
+PODFILE CHECKSUM: b774936b56bdb5ed18a1ef15768ba75c98d787bc
 
 COCOAPODS: 1.6.1

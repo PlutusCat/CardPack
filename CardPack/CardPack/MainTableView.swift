@@ -28,7 +28,7 @@ class MainTableView: UITableView {
 
 extension MainTableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 162
+        return MainTableViewCell.cellHeight
     }
 }
 

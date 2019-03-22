@@ -73,7 +73,7 @@ class MainTableViewCell: UITableViewCell {
     }()
     
     
-    private let insets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right:16)
+    private let insets = UIEdgeInsets(top: 4, left: 16, bottom: 4, right:16)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -142,4 +142,6 @@ class MainTableViewCell: UITableViewCell {
 
 extension MainTableViewCell {
     open class var id: String { return "MainTableViewCell_ID" }
+    
+    open class var cellHeight: CGFloat { return 170 }
 }

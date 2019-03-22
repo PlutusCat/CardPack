@@ -9,6 +9,8 @@ target 'CardPack' do
   pod 'RxRealm'
   pod 'SnapKit'
   pod 'Hero'
+  pod 'TesseractOCRiOS'
+  pod 'OpenCV'
   pod 'SwiftLint'
 
   target 'CardPackTests' do
