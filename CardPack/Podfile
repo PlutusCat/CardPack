@@ -1,0 +1,26 @@
+platform :ios, '12.0'
+
+target 'CardPack' do
+
+  use_frameworks!
+
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxRealm'
+  pod 'SnapKit'
+  pod 'Hero'
+  pod 'SwiftLint'
+
+  target 'CardPackTests' do
+  inherit! :search_paths
+
+  pod 'RxBlocking'
+  pod 'RxTest'
+  end
+
+  target 'CardPackUITests' do
+    inherit! :search_paths
+
+  end
+
+end

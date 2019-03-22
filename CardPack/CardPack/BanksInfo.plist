@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Z</key>
+	<dict>
+		<key>mainColor</key>
+		<string>#e85d35</string>
+		<key>nameCH</key>
+		<string>招商银行</string>
+		<key>nameEN</key>
+		<string>CMB</string>
+		<key>icon</key>
+		<string>CMB_icon</string>
+	</dict>
+</dict>
+</plist>
