@@ -14,13 +14,17 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .white
-        navigationItem.largeTitleDisplayMode = .always
-
+        navigationItem.largeTitleDisplayMode = .automatic
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         print("=== didReceiveMemoryWarning ===")
+    }
+    
+    deinit {
+        print("deinit == ", self)
     }
 
 }

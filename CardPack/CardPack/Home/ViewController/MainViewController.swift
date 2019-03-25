@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import RealmSwift
 
 class MainViewController: BaseViewController {
 
@@ -30,14 +31,21 @@ class MainViewController: BaseViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableview.reloadData()
+    }
+    
     private func addCardItem() {
-        let image = UIImage(named: "addItem")?.withRenderingMode(.alwaysOriginal)
+        let image = UIImage(named: "add_icon")?.withRenderingMode(.alwaysOriginal)
         let addItem = UIBarButtonItem(image: image, style: .plain, target: self, action:#selector(addCardAction))
-        navigationItem.leftBarButtonItem = addItem
+        navigationItem.rightBarButtonItem = addItem
     }
     
     @objc private func addCardAction() {
-        print("add Card ")
+        let vc = AddCardViewController()
+        let navigation = MainNavigationController.init(rootViewController: vc)
+        present(navigation, animated: true, completion: nil)
     }
     
 }

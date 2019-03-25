@@ -15,8 +15,10 @@ class MainNavigationController: UINavigationController {
 
 //        navigationBar.tintColor = .white
 //        navigationBar.barStyle = .blackTranslucent
-        navigationBar.prefersLargeTitles = true
-
+        if Layout.isFlowingseaScreen() {
+          navigationBar.prefersLargeTitles = true
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

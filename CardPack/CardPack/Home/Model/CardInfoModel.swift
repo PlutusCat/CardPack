@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 class CardPositiveModel: Object {
-    @objc dynamic var key = "CardPositiveInfo"
+    @objc dynamic var key = "CardPositiveModel_key"
     @objc dynamic var iconName = ""
     @objc dynamic var bankName = ""
     @objc dynamic var cardType = ""

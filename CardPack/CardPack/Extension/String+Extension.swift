@@ -9,13 +9,13 @@
 import UIKit
 
 extension String {
-    mutating func formattingGroup() {
+    func formatGroup() -> String {
         let formatter = NumberFormatter()
         formatter.usesGroupingSeparator = true
         formatter.groupingSize = 4
         formatter.groupingSeparator = " "
         formatter.multiplier = 2
         let number = formatter.number(from: self)
-        self = formatter.string(from: number!) ?? ""
+        return formatter.string(from: number!) ?? ""
     }
 }

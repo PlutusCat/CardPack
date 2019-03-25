@@ -17,6 +17,8 @@ extension UIColor {
                   alpha: 1.0)
     }
     
+    open class var pureBlack: UIColor { return UIColor(hex: "#000000") }
+    
     /// 十六进制字符串 转 Color
     ///
     /// - Parameter hex: 十六进制字符串

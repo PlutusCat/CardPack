@@ -7,17 +7,26 @@
 //
 
 import UIKit
+import RealmSwift
 
-class MainTableView: UITableView {
+class MainTableView: BaseTableView {
 
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: .zero, style: .grouped)
-        
-        separatorStyle = .none
-        showsVerticalScrollIndicator = false
         delegate = self
         dataSource = self
         register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.id)
+    }
+    
+    override func reloadData() {
+        super.reloadData()
+        let realm = try! Realm()
+        let object = realm.objects(CardPositiveModel.self)
+        
+        for (index, model) in object.enumerated() {
+            print(index)
+            print("number =", model.cardNum)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -43,6 +52,6 @@ extension MainTableView: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 20
     }
 }

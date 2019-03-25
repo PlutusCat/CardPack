@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainTableViewCell: UITableViewCell {
+class MainTableViewCell: BaseTableViewCell {
 
     private lazy var gradientLayer: CAGradientLayer = {
         let gradient = CAGradientLayer()
@@ -72,14 +72,12 @@ class MainTableViewCell: UITableViewCell {
         return view
     }()
     
-    
     private let insets = UIEdgeInsets(top: 4, left: 16, bottom: 4, right:16)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         backgroundColor = .clear
-        selectionStyle = .none
         
         addSubview(backView)
         backView.layer.addSublayer(gradientLayer)
