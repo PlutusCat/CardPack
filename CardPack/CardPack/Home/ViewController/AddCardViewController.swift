@@ -49,15 +49,14 @@ class AddCardViewController: BaseViewController {
     @objc private func saveAction() {
         
         let indexPath = IndexPath(row: 0, section: 0)
-        let cell = tableview.dequeueReusableCell(withIdentifier: AddCardTableViewCell.id, for: indexPath) as? AddCardTableViewCell
-        
-        guard let number = cell?.number else { return }
+        guard let cell = tableview.cellForRow(at: indexPath) as? AddCardTableViewCell else {
+            return
+        }
         
         let realm = try! Realm()
         let model = CardPositiveModel()
         model.key = Date().milliStamp
-        model.cardNum = number
-        
+        model.cardNum = cell.textField.text ?? ""
         try! realm.write {
             realm.add(model)
         }

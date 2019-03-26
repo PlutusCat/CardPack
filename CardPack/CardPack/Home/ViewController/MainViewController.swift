@@ -33,7 +33,20 @@ class MainViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableview.reloadData()
+        reloadTableview()
+    }
+    
+    private func reloadTableview() {
+        
+        let realm = try! Realm()
+        let objects = realm.objects(CardPositiveModel.self)
+        
+        guard let model = objects.last else {
+            print("数据不应该刷新")
+            return
+        }
+        tableview.reload(with: model)
+
     }
     
     private func addCardItem() {

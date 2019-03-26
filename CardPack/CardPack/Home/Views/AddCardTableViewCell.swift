@@ -10,13 +10,6 @@ import UIKit
 
 class AddCardTableViewCell: BaseTableViewCell {
 
-    var number: String? {
-        get {
-            return textField.text
-        }
-    }
-    
-    private var dateFormate = Bool()
     private lazy var titleLabel: UILabel = {
        let label = UILabel()
         label.text = "实体卡号："
@@ -24,7 +17,7 @@ class AddCardTableViewCell: BaseTableViewCell {
         return label
     }()
     
-    private lazy var textField: UITextField = {
+    lazy var textField: UITextField = {
        let text = UITextField()
         text.textAlignment = .center
         text.font = UIFont.boldSystemFont(ofSize: 18)
@@ -74,14 +67,11 @@ class AddCardTableViewCell: BaseTableViewCell {
 
 extension AddCardTableViewCell {
     open class var id: String { return "AddCardTableViewCell_ID" }
-    
     open class var cellHeight: CGFloat { return 100 }
 }
 
 extension AddCardTableViewCell: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        
         
         return true
     }

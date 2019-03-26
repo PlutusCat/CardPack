@@ -95,6 +95,10 @@ class MainTableViewCell: BaseTableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func reload(with model: CardPositiveModel) {
+        cardNum.text = model.cardNum.formatGroup()
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         backView.snp.makeConstraints { (make) in

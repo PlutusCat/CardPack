@@ -21,4 +21,7 @@ class CardPositiveModel: Object {
     override static func primaryKey() -> String? {
         return "key"
     }
+    override static func indexedProperties() -> [String] {
+        return ["cardNum"]
+    }
 }
