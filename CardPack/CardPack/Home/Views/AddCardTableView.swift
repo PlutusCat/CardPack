@@ -60,7 +60,7 @@ class AddCardHeader: UIView {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "卡片详细信息"
-        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.font = UIFont.boldSystemFont(ofSize: 22)
         label.textAlignment = .center
         return label
     }()

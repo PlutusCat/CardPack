@@ -19,8 +19,6 @@ class MainTableView: BaseTableView {
         dataSource = self
         register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.id)
         
-        readFromRealm()
-        
     }
     
     func reload(with data: CardPositiveModel) {

@@ -96,7 +96,13 @@ class MainTableViewCell: BaseTableViewCell {
     }
     
     func reload(with model: CardPositiveModel) {
-        cardNum.text = model.cardNum.formatGroup()
+        let cardNumber = model.cardNum
+        if cardNumber.count > 16 {
+            cardType.text = "信用卡/借记卡"
+        } else {
+            cardType.text = "储蓄卡"
+        }
+        cardNum.text = cardNumber.formatGroup()
     }
     
     override func layoutSubviews() {
